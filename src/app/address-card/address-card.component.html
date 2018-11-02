@@ -1,0 +1,17 @@
+<div class="address-card">
+    <p>
+      Your details:
+    </p>
+    <p>{{ user.name }}</p>
+    <p class = "title">{{ user.title }}</p> 
+    <button *ngIf="IsCollapsed" (click)="toggleCollapse()">Expand</button>
+    <button *ngIf="!IsCollapsed" (click)="toggleCollapse()">Collapse</button>
+    <div *ngIf="!isCollapsed">    
+    <p>{{ user.address }} </p>
+    <div *ngIf = "user.phone.length">
+      <P>Phone:</P>
+      <p *ngFor = "let phoneNumber of user.phone">{{ phoneNumber }}</p>
+    </div>
+  </div> 
+     
+  </div>
